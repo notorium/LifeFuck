@@ -6,28 +6,250 @@
     android:layout_height="match_parent"
     tools:context=".WordsExplanationActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <TextView
+            android:id="@+id/word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="word"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
+        <Button
+            android:id="@+id/emotion_change_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Positive ⇔ Negative"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/emotion_textView1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/emotions1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="楽"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/emotion_textView2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emotion_textView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/emotions2"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="喜"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/emotion_textView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/emotion_textView1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emotion_textView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/emotions3"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="褒"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/emotion_textView4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/emotion_textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emotion_textView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/emotions7"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="驚"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/emotion_textView3"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/emotion_textView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/emotions4"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="悲"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/emotion_textView6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emotion_textView6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/emotions5"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="怒"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/emotion_textView7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/emotion_textView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emotion_textView7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/emotions6"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="悔"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/emotion_textView8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/emotion_textView6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emotion_textView8"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/emotions7"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="驚"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/emotion_textView7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/positive_mean_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <ListView
+        android:id="@+id/negative_mean_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

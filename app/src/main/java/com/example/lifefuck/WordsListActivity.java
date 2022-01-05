@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class WordsListActivity extends AppCompatActivity {
-    private ArrayList<Words> wordsArrayList;
+    public static ArrayList<Words> wordsArrayList;
     private WordsListAdapter wordsListAdapter;
     private ListView wordsListView;
 

@@ -8,17 +8,23 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class WordsExplanationAdapter extends BaseAdapter {
     private LayoutInflater layoutInflater = null;
-    private ArrayList<Words> rows;
+    private List<String> rows;
 
     public WordsExplanationAdapter(Context context) {
         this.layoutInflater = LayoutInflater.from(context);
     }
 
-    public void setList(ArrayList<Words> rows) {
+    public void setList(List<String> rows) {
         this.rows = rows;
+    }
+
+    @Override
+    public boolean isEnabled(int position) {
+        return false;
     }
 
     @Override
@@ -38,9 +44,11 @@ public class WordsExplanationAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = layoutInflater.inflate(R.layout.words_list_item, viewGroup, false);
-        Words row = rows.get(i);
-        ((TextView) view.findViewById(R.id.word)).setText(row.getWord());
+        if (view == null) {
+            view = layoutInflater.inflate(R.layout.words_explanation_item, viewGroup, false);
+
+
+        }
         return view;
     }
 
