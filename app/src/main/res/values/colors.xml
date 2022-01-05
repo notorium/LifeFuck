@@ -15,6 +15,7 @@
     <color name="emotions5">#960000</color>
     <color name="emotions6">#00AF64</color>
     <color name="emotions7">#FFC800</color>
-
+    <color name="positive">#FF0000</color>
+    <color name="negative">#0000FF</color>
 
 </resources>

@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/positive_meaning_icons"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
@@ -116,8 +116,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintEnd_toEndOf="@+id/positive_meaning_icons"
+        app:layout_constraintTop_toBottomOf="@+id/positive_meaning_icons">
 
         <TextView
             android:id="@+id/emotion_textView5"

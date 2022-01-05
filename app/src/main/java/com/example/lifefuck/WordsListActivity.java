@@ -37,7 +37,7 @@ public class WordsListActivity extends AppCompatActivity {
                     Words prefName = (Words) parent.getItemAtPosition(position);
 
                     Intent intent = new Intent(getApplicationContext(), WordsExplanationActivity.class);
-                    intent.putExtra("selectWord", prefName.getWord());
+                    intent.putExtra("ListIndexNum", position);
                     startActivity(intent);
                 }
         );
