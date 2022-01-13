@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/word_mean_textView"
+        android:id="@+id/word_meaning_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -29,6 +29,6 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/word_mean_textView"
-        app:layout_constraintTop_toBottomOf="@+id/word_mean_textView"></LinearLayout>
+        app:layout_constraintStart_toStartOf="@+id/word_meaning_textView"
+        app:layout_constraintTop_toBottomOf="@+id/word_meaning_textView"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

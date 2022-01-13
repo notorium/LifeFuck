@@ -3,30 +3,60 @@
     {
       "word": "Fuck",
       "positivemean": [],
-      "positivenum": [1,2,3,4],
-      "negativemean": [],
-      "negativenum": [5,8]
+      "positivenum": [],
+      "negativemean": [
+        "激怒している時の強調表現,Screw you! Fuck!\n(ふざけんな！クソが！),Where the fuck are you guys!\n(てめぇらどこに居やがる！！)",
+        "びっくりした時の強調表現,Fuck! Don’t surprise me!\n(うわぁ！！びっくりさせんなよ！)",
+        "悔しい時の強調表現,Fuck! I lost again...\n(ちくしょう！また負けた...),Fuck Ahhhhhhhhhhhh!!!!\n(クソぉぉぉぉぁぁぁぁああああ！！！)"
+      ],
+      "negativenum": [
+        6,
+        7,
+        8
+      ]
     },
     {
-      "word": "FuckOff",
+      "word": "Fucking",
       "positivemean": [],
-      "positivenum": [2,3],
+      "positivenum": [
+        2,
+        3
+      ],
       "negativemean": [],
-      "negativenum": [7]
+      "negativenum": [
+        5,
+        6
+      ]
     },
     {
       "word": "Fuck",
       "positivemean": [],
-      "positivenum": [1],
+      "positivenum": [
+        1
+      ],
       "negativemean": [],
-      "negativenum": [5,7,8]
+      "negativenum": [
+        5,
+        7,
+        8
+      ]
     },
     {
       "word": "Fuck",
       "positivemean": [],
-      "positivenum": [1,2,3,4],
+      "positivenum": [
+        1,
+        2,
+        3,
+        4
+      ],
       "negativemean": [],
-      "negativenum": [5,6,7,8]
+      "negativenum": [
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "word": "Fuck",

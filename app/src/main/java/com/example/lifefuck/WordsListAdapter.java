@@ -42,7 +42,7 @@ public class WordsListAdapter extends BaseAdapter {
             view = layoutInflater.inflate(R.layout.words_list_item, viewGroup, false);
             Words row = rows.get(i);
 
-            ((TextView) view.findViewById(R.id.word)).setText(row.getWord());
+            ((TextView) view.findViewById(R.id.wordTextView)).setText(row.getWord());
             TextView[] positiveEmotionTextView = {
                     view.findViewById(R.id.emotion_textView1),
                     view.findViewById(R.id.emotion_textView2),

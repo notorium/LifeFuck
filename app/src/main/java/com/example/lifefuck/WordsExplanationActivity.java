@@ -15,7 +15,8 @@ import static com.example.lifefuck.WordsListActivity.wordsArrayList;
 
 public class WordsExplanationActivity extends AppCompatActivity {
     private WordsExplanationAdapter wordsExplanationAdapter;
-    private ListView wordsMeanListView;
+    private ListView positiveMeanListView, negativeMeanListView;
+    private TextView wordTextView;
     private TextView[] positiveEmotionTextView, negativeEmotionTextView;
     private Button emotionChangeButton;
     private View positiveMeaningIcons, negativeMeaningIcons;
@@ -28,6 +29,7 @@ public class WordsExplanationActivity extends AppCompatActivity {
 
         int listIndexNum = getIntent().getIntExtra("ListIndexNum", 0);
 
+        wordTextView = findViewById(R.id.wordTextView);
         emotionChangeButton = findViewById(R.id.emotion_change_button);
         positiveMeaningIcons = findViewById(R.id.positive_meaning_icons);
         negativeMeaningIcons = findViewById(R.id.negative_meaning_icons);
@@ -54,27 +56,32 @@ public class WordsExplanationActivity extends AppCompatActivity {
             negativeEmotionTextView[value - 5].setVisibility(View.VISIBLE);
         }
 
+        wordTextView.setText(wordsArrayList.get(listIndexNum).getWord());
         // ListViewにAdapterを設定する
         wordsExplanationAdapter = new WordsExplanationAdapter(this);
-
-        wordsMeanListView = findViewById(R.id.positive_meaning_listview);
+        positiveMeanListView = findViewById(R.id.positive_meaning_listview);
         wordsExplanationAdapter.setList(Arrays.asList(wordsArrayList.get(listIndexNum).getPositiveMeaning()));
-        wordsMeanListView.setAdapter(wordsExplanationAdapter);
+        positiveMeanListView.setAdapter(wordsExplanationAdapter);
 
-        wordsMeanListView = findViewById(R.id.negative_meaning_listview);
+        wordsExplanationAdapter = new WordsExplanationAdapter(this);
+        negativeMeanListView = findViewById(R.id.negative_meaning_listview);
         wordsExplanationAdapter.setList(Arrays.asList(wordsArrayList.get(listIndexNum).getNegativeMeaning()));
-        wordsMeanListView.setAdapter(wordsExplanationAdapter);
+        negativeMeanListView.setAdapter(wordsExplanationAdapter);
 
 
         emotionChangeButton.setOnClickListener(v -> {
             if (emotionFlg) {
                 positiveMeaningIcons.setVisibility(View.GONE);
                 negativeMeaningIcons.setVisibility(View.VISIBLE);
+                positiveMeanListView.setVisibility(View.GONE);
+                negativeMeanListView.setVisibility(View.VISIBLE);
                 emotionChangeButton.setBackgroundColor(getResources().getColor(R.color.negative));
                 emotionChangeButton.setText("Negative");
             } else {
                 positiveMeaningIcons.setVisibility(View.VISIBLE);
                 negativeMeaningIcons.setVisibility(View.GONE);
+                positiveMeanListView.setVisibility(View.VISIBLE);
+                negativeMeanListView.setVisibility(View.GONE);
                 emotionChangeButton.setBackgroundColor(getResources().getColor(R.color.positive));
                 emotionChangeButton.setText("Positive");
             }
